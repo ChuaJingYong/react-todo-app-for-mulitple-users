@@ -32,6 +32,8 @@ export default function Home() {
 }
 
 function WelcomePage() {
+  const navigate = useNavigate()
+  
   return (
     <>
       <Container className="p-3">
@@ -57,7 +59,7 @@ function WelcomePage() {
           >
             <h1>Welcome to your personal Todo App!</h1>
             <p className="mt-3 mb-5">Please Login to get started</p>
-            <a href="/login" className="btn btn-primary">
+            <a onClick={()=>{navigate('/login')}} className="btn btn-primary">
               Login
             </a>
           </div>
